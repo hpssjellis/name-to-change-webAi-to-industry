@@ -2,85 +2,108 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>WebAI Industry Interface</title>
+    <title>WebAI Industry Portal</title>
 </head>
-<body style="font-family: sans-serif; line-height: 1.6; max-width: 900px; margin: auto; padding: 20px; background-color: #f9f9f9; color: #333;">
+<body style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; max-width: 1000px; margin: auto; padding: 20px; background-color: #f0f2f5; color: #1a1a1a;">
 
-    <nav style="background: #fff; padding: 10px; border-bottom: 2px solid #ddd; margin-bottom: 20px;">
-        <a href="index.html" style="margin-right: 15px; font-weight: bold; text-decoration: none; color: #007bff;">Home</a>
-        <a href="page1.html" style="text-decoration: none; color: #555;">Test Page 1</a>
+    <nav style="background: #fff; padding: 15px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); margin-bottom: 25px; display: flex; gap: 20px;">
+        <a href="index.html" style="font-weight: bold; text-decoration: none; color: #0056b3;">Home</a>
+        <a href="page1.html" style="text-decoration: none; color: #666;">Test Page 1</a>
     </nav>
 
-    <header style="background: linear-gradient(135deg, #1a1a1a, #444); color: #fff; padding: 2rem; text-align: center; border-radius: 8px;">
-        <h1>WebAI for Industry</h1>
-        <p>Local Intelligence, Global Scale</p>
+    <header style="background: #003366; color: white; padding: 40px; text-align: center; border-radius: 12px; margin-bottom: 30px;">
+        <h1 style="margin: 0; font-size: 2.5em;">Industry WebAI Concept Map</h1>
+        <p style="opacity: 0.9;">Secure, Client-Side Intelligence for Modern Enterprise</p>
     </header>
 
     <main>
-        <section style="background: white; margin-top: 20px; padding: 20px; border-radius: 8px; border: 1px solid #eee;">
-            <h2>WebAI Architectures</h2>
-            <p>Select a type to see how it handles industrial data:</p>
-            <div style="display: flex; gap: 10px; margin-bottom: 15px;">
-                <button onclick="myUpdateArch('local')" style="padding: 10px; flex: 1; cursor: pointer;">Local-First AI</button>
-                <button onclick="myUpdateArch('hybrid')" style="padding: 10px; flex: 1; cursor: pointer;">Hybrid Cloud AI</button>
-            </div>
-            <div id="myArchDisplay" style="background: #f0f7ff; padding: 15px; border-radius: 5px; min-height: 80px;">
-                <em>Click a button to view architectural details.</em>
+        <section style="background: white; padding: 25px; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
+            <h2 style="border-bottom: 2px solid #003366; padding-bottom: 10px;">The WebAI Lab (Examples & Frameworks)</h2>
+            <p>Explore different technical implementations of browser-based AI:</p>
+            
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-top: 20px;">
+                <div style="padding: 15px; border: 1px solid #ddd; border-radius: 8px;">
+                    <strong>1. <a href="mcp-demo.html" style="color: #d63384;">MCP (Model Context Protocol)</a></strong>
+                    <p style="font-size: 0.85em; margin: 5px 0;">The "USB-C for AI" - standardizing how local tools and data connect to models.</p>
+                </div>
+                <div style="padding: 15px; border: 1px solid #ddd; border-radius: 8px;">
+                    <strong>2. <a href="rag-explorer.html" style="color: #d63384;">Local RAG (Vector Search)</a></strong>
+                    <p style="font-size: 0.85em; margin: 5px 0;">Retrieval-Augmented Generation using in-browser vector databases for private docs.</p>
+                </div>
+                <div style="padding: 15px; border: 1px solid #ddd; border-radius: 8px;">
+                    <strong>3. <a href="chrome-ai.html" style="color: #d63384;">Chrome Built-in AI</a></strong>
+                    <p style="font-size: 0.85em; margin: 5px 0;">Utilizing Gemini Nano directly through the browser's native Window.ai API.</p>
+                </div>
+                <div style="padding: 15px; border: 1px solid #ddd; border-radius: 8px;">
+                    <strong>4. <a href="huggingface-js.html" style="color: #d63384;">Transformers.js</a></strong>
+                    <p style="font-size: 0.85em; margin: 5px 0;">Running state-of-the-art Hugging Face models (NLP, Vision, Audio) 100% locally.</p>
+                </div>
+                <div style="padding: 15px; border: 1px solid #ddd; border-radius: 8px;">
+                    <strong>5. <a href="webgpu-compute.html" style="color: #007bff;">WebGPU Acceleration</a></strong>
+                    <p style="font-size: 0.85em; margin: 5px 0;">High-performance hardware access for heavy industrial model inference.</p>
+                </div>
+                <div style="padding: 15px; border: 1px solid #ddd; border-radius: 8px;">
+                    <strong>6. <a href="onnx-runtime.html" style="color: #007bff;">ONNX Runtime Web</a></strong>
+                    <p style="font-size: 0.85em; margin: 5px 0;">Deploying cross-platform models from PyTorch or TensorFlow in the browser.</p>
+                </div>
+                <div style="padding: 15px; border: 1px solid #ddd; border-radius: 8px;">
+                    <strong>7. <a href="edge-vision.html" style="color: #007bff;">Real-time Edge Vision</a></strong>
+                    <p style="font-size: 0.85em; margin: 5px 0;">Object detection and safety monitoring using webcam feeds without cloud lag.</p>
+                </div>
+                <div style="padding: 15px; border: 1px solid #ddd; border-radius: 8px;">
+                    <strong>8. <a href="wasm-inference.html" style="color: #007bff;">WASM Backend Modules</a></strong>
+                    <p style="font-size: 0.85em; margin: 5px 0;">Using WebAssembly for high-speed mathematical operations on legacy CPU hardware.</p>
+                </div>
+                <div style="padding: 15px; border: 1px solid #ddd; border-radius: 8px;">
+                    <strong>9. <a href="privacy-sandbox.html" style="color: #007bff;">Privacy Sandbox AI</a></strong>
+                    <p style="font-size: 0.85em; margin: 5px 0;">Differential privacy and federated learning concepts for industrial datasets.</p>
+                </div>
+                <div style="padding: 15px; border: 1px solid #ddd; border-radius: 8px;">
+                    <strong>10. <a href="hybrid-orchestrator.html" style="color: #007bff;">Hybrid Orchestrator</a></strong>
+                    <p style="font-size: 0.85em; margin: 5px 0;">Smart switching between local 'Nano' models and heavy cloud-based 'Pro' models.</p>
+                </div>
             </div>
         </section>
 
-        <section style="background: white; margin-top: 20px; padding: 20px; border-radius: 8px; border: 1px solid #eee;">
-            <h2>Industrial Use Cases</h2>
-            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
-                <div style="border-left: 4px solid #28a745; padding-left: 15px;">
-                    <strong>Visual Inspection</strong>
-                    <p style="font-size: 0.9em;">Running models directly in the browser to identify product defects on assembly lines via webcam.</p>
-                </div>
-                <div style="border-left: 4px solid #ffc107; padding-left: 15px;">
-                    <strong>Predictive Maintenance</strong>
-                    <p style="font-size: 0.9em;">Analyzing sensor vibrations in real-time within a web dashboard to forecast machine failure.</p>
-                </div>
-            </div>
-        </section>
-
-        <section style="background: #fff5f5; margin-top: 20px; padding: 20px; border-radius: 8px; border: 1px solid #ffcccc;">
-            <h2 style="color: #c82333;">Security & Privacy</h2>
-            <ul style="list-style-type: none; padding: 0;">
-                <li style="margin-bottom: 10px;">🛡️ <strong>Zero Data Leakage:</strong> In Local-First WebAI, proprietary data never leaves the local network.</li>
-                <li style="margin-bottom: 10px;">🔑 <strong>Browser Isolation:</strong> WebAI runs in a "sandbox," preventing the AI from accessing the rest of the OS without permission.</li>
-                <li style="margin-bottom: 10px;">📜 <strong>Compliance:</strong> Easily meet GDPR and HIPAA requirements by keeping PII (Personally Identifiable Information) on the client side.</li>
-            </ul>
-            <button onclick="myToggleSecurityLog()" style="margin-top: 10px;">Show Security Log</button>
-            <div id="mySecurityLog" style="display: none; margin-top: 10px; font-family: monospace; font-size: 0.8em; color: #666;">
-                [INFO] Initializing WebGPU Sandbox...<br>
-                [SEC] Memory encryption active.<br>
-                [SEC] Model weights verified via SHA-256.
+        <section style="background: #fff; margin-top: 25px; padding: 25px; border-radius: 12px; border-left: 10px solid #28a745;">
+            <h3>System Intelligence Monitor</h3>
+            <p>Simulate an industrial AI initialization process:</p>
+            <button onclick="myStartIndustrialSystem()" style="background: #28a745; color: white; border: none; padding: 12px 24px; border-radius: 5px; cursor: pointer; font-weight: bold;">Initialize Local Nodes</button>
+            <div id="mySystemLog" style="margin-top: 15px; background: #222; color: #0f0; padding: 15px; border-radius: 5px; font-family: monospace; font-size: 0.9em; min-height: 50px;">
+                > System Idle. Waiting for input...
             </div>
         </section>
     </main>
 
-    <footer style="margin-top: 40px; text-align: center; font-size: 0.8em; color: #888;">
-        <p>&copy; 2026 WebAI Industrial Group</p>
-    </footer>
-
     <script>
-        // Descriptive async function for architecture updates
-        async function myUpdateArch(myType) {
-            const myDisplay = document.getElementById('myArchDisplay');
+        // Descriptive async function for simulation
+        async function myStartIndustrialSystem() {
+            const myLog = document.getElementById('mySystemLog');
+            myLog.innerHTML = "> Accessing Local WebGPU...<br>";
             
-            if (myType === 'local') {
-                myDisplay.innerHTML = "<strong>Local-First:</strong> Runs models on the user's GPU (via WebGPU). <br> <em>Pros:</em> Zero latency, maximum privacy, works offline.";
-            } else {
-                myDisplay.innerHTML = "<strong>Hybrid Cloud:</strong> Small models run in the browser, complex reasoning is sent to a private server. <br> <em>Pros:</em> Handles massive datasets while maintaining a responsive UI.";
+            try {
+                // Simulate various loading stages
+                await myWaitTime(800);
+                myLog.innerHTML += "> Loading Transformers.js pipeline (Worker Thread 1)...<br>";
+                
+                await myWaitTime(1000);
+                myLog.innerHTML += "> Verified Model via SHA-256 Checksum.<br>";
+                
+                await myWaitTime(600);
+                myLog.innerHTML += "> Establishing MCP local-proxy connection...<br>";
+                
+                await myWaitTime(500);
+                myLog.innerHTML += "<strong style='color:white;'>[SUCCESS] Industry Node Online. Privacy Sandbox active.</strong>";
+            } catch (myError) {
+                myLog.innerHTML += "> [ERROR] Initialization failed: " + myError;
             }
         }
 
-        // Simple toggle for hidden sections
-        function myToggleSecurityLog() {
-            const myLog = document.getElementById('mySecurityLog');
-            const myIsHidden = myLog.style.display === "none";
-            myLog.style.display = myIsHidden ? "block" : "none";
+        // Helper function for wait times
+        function myWaitTime(myMs) {
+            return new Promise(myResolve => setTimeout(myResolve, myMs));
         }
     </script>
+
 </body>
 </html>
