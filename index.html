@@ -2,63 +2,84 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>WebAI to Industry</title>
+    <title>WebAI Industry Interface</title>
 </head>
-<body style="font-family: sans-serif; line-height: 1.6; max-width: 800px; margin: auto; padding: 20px; background-color: #f4f4f4;">
+<body style="font-family: sans-serif; line-height: 1.6; max-width: 900px; margin: auto; padding: 20px; background-color: #f9f9f9; color: #333;">
 
-   Test first link <a href="page1.html">page1.html</a> <br>
+    <nav style="background: #fff; padding: 10px; border-bottom: 2px solid #ddd; margin-bottom: 20px;">
+        <a href="index.html" style="margin-right: 15px; font-weight: bold; text-decoration: none; color: #007bff;">Home</a>
+        <a href="page1.html" style="text-decoration: none; color: #555;">Test Page 1</a>
+    </nav>
 
-    <header style="background: #333; color: #fff; padding: 1rem; text-align: center; border-radius: 8px;">
-        <h1>WebAI Industry Interface</h1>
-        <p>Bridging Browser Intelligence with Industrial Scale</p>
+    <header style="background: linear-gradient(135deg, #1a1a1a, #444); color: #fff; padding: 2rem; text-align: center; border-radius: 8px;">
+        <h1>WebAI for Industry</h1>
+        <p>Local Intelligence, Global Scale</p>
     </header>
 
     <main>
-        <section style="background: white; margin-top: 20px; padding: 20px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
-            <h2>Industrial AI Organization</h2>
-            <div id="myInformationDisplay">
-                <p>Click a category to see how WebAI integrates with industrial sectors:</p>
+        <section style="background: white; margin-top: 20px; padding: 20px; border-radius: 8px; border: 1px solid #eee;">
+            <h2>WebAI Architectures</h2>
+            <p>Select a type to see how it handles industrial data:</p>
+            <div style="display: flex; gap: 10px; margin-bottom: 15px;">
+                <button onclick="myUpdateArch('local')" style="padding: 10px; flex: 1; cursor: pointer;">Local-First AI</button>
+                <button onclick="myUpdateArch('hybrid')" style="padding: 10px; flex: 1; cursor: pointer;">Hybrid Cloud AI</button>
             </div>
-
-            <div style="display: flex; gap: 10px; flex-wrap: wrap; margin-top: 15px;">
-                <button onclick="myFetchIndustryData('Manufacturing')" style="padding: 10px; cursor: pointer;">Manufacturing</button>
-                <button onclick="myFetchIndustryData('Logistics')" style="padding: 10px; cursor: pointer;">Logistics</button>
-                <button onclick="myFetchIndustryData('Energy')" style="padding: 10px; cursor: pointer;">Energy Grid</button>
+            <div id="myArchDisplay" style="background: #f0f7ff; padding: 15px; border-radius: 5px; min-height: 80px;">
+                <em>Click a button to view architectural details.</em>
             </div>
         </section>
 
-        <section style="background: #e0e0e0; margin-top: 20px; padding: 15px; border-radius: 8px; font-family: monospace;">
-            <strong>System Status:</strong> <span id="myStatusUpdate">Ready</span>
+        <section style="background: white; margin-top: 20px; padding: 20px; border-radius: 8px; border: 1px solid #eee;">
+            <h2>Industrial Use Cases</h2>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+                <div style="border-left: 4px solid #28a745; padding-left: 15px;">
+                    <strong>Visual Inspection</strong>
+                    <p style="font-size: 0.9em;">Running models directly in the browser to identify product defects on assembly lines via webcam.</p>
+                </div>
+                <div style="border-left: 4px solid #ffc107; padding-left: 15px;">
+                    <strong>Predictive Maintenance</strong>
+                    <p style="font-size: 0.9em;">Analyzing sensor vibrations in real-time within a web dashboard to forecast machine failure.</p>
+                </div>
+            </div>
+        </section>
+
+        <section style="background: #fff5f5; margin-top: 20px; padding: 20px; border-radius: 8px; border: 1px solid #ffcccc;">
+            <h2 style="color: #c82333;">Security & Privacy</h2>
+            <ul style="list-style-type: none; padding: 0;">
+                <li style="margin-bottom: 10px;">🛡️ <strong>Zero Data Leakage:</strong> In Local-First WebAI, proprietary data never leaves the local network.</li>
+                <li style="margin-bottom: 10px;">🔑 <strong>Browser Isolation:</strong> WebAI runs in a "sandbox," preventing the AI from accessing the rest of the OS without permission.</li>
+                <li style="margin-bottom: 10px;">📜 <strong>Compliance:</strong> Easily meet GDPR and HIPAA requirements by keeping PII (Personally Identifiable Information) on the client side.</li>
+            </ul>
+            <button onclick="myToggleSecurityLog()" style="margin-top: 10px;">Show Security Log</button>
+            <div id="mySecurityLog" style="display: none; margin-top: 10px; font-family: monospace; font-size: 0.8em; color: #666;">
+                [INFO] Initializing WebGPU Sandbox...<br>
+                [SEC] Memory encryption active.<br>
+                [SEC] Model weights verified via SHA-256.
+            </div>
         </section>
     </main>
 
+    <footer style="margin-top: 40px; text-align: center; font-size: 0.8em; color: #888;">
+        <p>&copy; 2026 WebAI Industrial Group</p>
+    </footer>
+
     <script>
-        // Descriptive function using async/await and "my" prefix
-        async function myFetchIndustryData(mySelectedSector) {
-            const myDisplayArea = document.getElementById('myInformationDisplay');
-            const myStatusText = document.getElementById('myStatusUpdate');
-
-            myStatusText.innerText = "Processing " + mySelectedSector + "...";
+        // Descriptive async function for architecture updates
+        async function myUpdateArch(myType) {
+            const myDisplay = document.getElementById('myArchDisplay');
             
-            try {
-                // Simulating a brief delay for AI processing or API fetch
-                await new Promise(myResolve => setTimeout(myResolve, 500));
-
-                let myContent = "";
-
-                if (mySelectedSector === 'Manufacturing') {
-                    myContent = "<h3>Manufacturing</h3><ul><li>Edge-based defect detection</li><li>Real-time worker safety monitoring</li><li>Predictive maintenance via browser-linked sensors</li></ul>";
-                } else if (mySelectedSector === 'Logistics') {
-                    myContent = "<h3>Logistics</h3><ul><li>In-browser route optimization</li><li>Package sorting via WebML</li><li>Inventory tracking using device cameras</li></ul>";
-                } else if (mySelectedSector === 'Energy') {
-                    myContent = "<h3>Energy Grid</h3><ul><li>Load balancing visualizations</li><li>Anomaly detection in local substations</li><li>Decentralized grid management</li></ul>";
-                }
-
-                myDisplayArea.innerHTML = myContent;
-                myStatusText.innerText = "Data displayed for " + mySelectedSector;
-            } catch (myError) {
-                myStatusText.innerText = "Error: " + myError;
+            if (myType === 'local') {
+                myDisplay.innerHTML = "<strong>Local-First:</strong> Runs models on the user's GPU (via WebGPU). <br> <em>Pros:</em> Zero latency, maximum privacy, works offline.";
+            } else {
+                myDisplay.innerHTML = "<strong>Hybrid Cloud:</strong> Small models run in the browser, complex reasoning is sent to a private server. <br> <em>Pros:</em> Handles massive datasets while maintaining a responsive UI.";
             }
+        }
+
+        // Simple toggle for hidden sections
+        function myToggleSecurityLog() {
+            const myLog = document.getElementById('mySecurityLog');
+            const myIsHidden = myLog.style.display === "none";
+            myLog.style.display = myIsHidden ? "block" : "none";
         }
     </script>
 </body>
